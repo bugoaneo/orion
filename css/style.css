@@ -1,0 +1,65 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+html {
+  font: 16px/1 'franklin gothic demi cond', Atial, sans-serif;
+}
+
+.wrapper {
+  background-image: url(../img/bg.png);
+}
+
+.head-section {
+  height: 100vh;
+}
+
+.header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  padding-top: 9px;
+}
+
+.nav__list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__list .nav__item {
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.nav__list .nav__link {
+  color: #436276;
+  padding-bottom: 3px;
+  border-bottom: 2px ridge #436276;
+}
+
+.consultation-form {
+  background-image: linear-gradient(to bottom, #D09873 0%, #d3a47c 100%);
+}
+
+.map {
+  height: 500px;
+}
+
+/*# sourceMappingURL=style.css.map */
