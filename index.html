@@ -150,14 +150,14 @@ http://browsehappy.com/">обновите</a>
     <div class="container">
       <h2 class="section__title">Калькулятор предварительного расчета стоимости укладки асфальта</h2>
       <form action="POST" id="calculator" class="calculator__form">
-        <div class="calculator__sider slider">
-          <input type="radio" class="input-hide" id="simple" name="slider__point">
-          <input type="radio" class="input-hide" id="ultra" name="slider__point">
-          <input type="radio" class="input-hide" id="budget" name="slider__point">
-          <input type="radio" class="input-hide" id="standart" name="slider__point">
-          <input type="radio" class="input-hide" id="cargo" name="slider__point">
-          <input type="radio" class="input-hide" id="germany" name="slider__point">
-          <input type="radio" class="input-hide" id="yuors" checked name="slider__point">
+        <div class="calculator__wrapper">
+          <input type="radio" class="form__input-hide" id="simple" name="slider__point">
+          <input type="radio" class="form__input-hide" id="ultra" name="slider__point">
+          <input type="radio" class="form__input-hide" id="budget" name="slider__point">
+          <input type="radio" class="form__input-hide" id="standart" name="slider__point">
+          <input type="radio" class="form__input-hide" id="cargo" name="slider__point">
+          <input type="radio" class="form__input-hide" id="germany" name="slider__point">
+          <input type="radio" class="form__input-hide" id="yours" checked name="slider__point">
 
           <div class="calculator__control-list">
             <label class="calculator__control calculator__control--simple" for="simple">Просто асфальтирование</label>
@@ -169,295 +169,362 @@ http://browsehappy.com/">обновите</a>
             <label class="calculator__control calculator__control--yours" for="yours">Свой вариант</label>
           </div>
 
-          <div class="calculator__list">
-            <div class="calculator__item slide slide--simple">
-              <div class="calculator__description">
-                <h3 class="slide__header">Просто асфальтирование</h3>
-                <div class="slide__range">
-                  <label class="slide__label" for="asphalt1">Асфальт верхний слой</label>
-                  <div class="range">
+          <div class="calculator__slide">
+            <div class="calculator__slide-item calculator__slide-item--simple">
+              <div class="calculator__slide-description">
+                <h3 class="calculator__slide-header">Просто асфальтирование</h3>
+                <div class="calculator__slide-range range">
+                  <label class="range__label" for="asphalt1">Асфальт верхний слой</label>
+                  <div class="range__wrapper">
                     <div class="range__progress">
                       <div class="range__bar" style="width: 0%"></div>
                     </div>
                     <div class="range__toggle"></div>
                   </div>                  
-                  <input type="text" class="slide__input" id="asphalt1" placeholder="0">
+                  <input type="text" class="calculator__slide-input" id="asphalt1" placeholder="0">
                 </div>
-                <div class="slide__description">
+                <div class="calculator__slide-text">
                   <p>Данный вариант используется при ремонте дорожной одежды. Если ландшафт территории на которой будет производится ремонт позволяет не фрезеровать старый слой покрытия, то с согласия заказчика, новый слой асфальтобетона укладывается поверх старого. Это укрепит несущую функцию основания.</p>
                   <p>Если конечно, первичное основание было выполнено корректно.</p>
                 </div>
               </div>
-              <div class="calculator__structure">
-                <div class="calculator__structure-top"></div>
-                <div class="calculator__structure-singl"></div>
-                <div class="calculator__structure-bottom"></div>
+              <div class="calculator__slide-structure structure">
+                <div class="structure--top"></div>
+                <div class="structure--singl"></div>
+                <div class="structure--bottom"></div>
               </div>
             </div>
-            <div class="calculator__item slide slide--ultra">
-              <div class="calculator__description">
-                <h3 class="slide__header">Ультра экономный</h3>
-                <div class="slide__description">
+      
+            <div class="calculator__slide-item calculator__slide-item--ultra">
+              <div class="calculator__slide-description">
+                <h3 class="calculator__slide-header">Ультра экономный</h3>
+                <div class="calculator__slide-text">
                 <p>Этот вариант асфальтирования включает в себя засыпку и трамбовку щебнем 10 см. или эквивалентным материалом, после чего асфальт.</p>
                 <p>Сей вариант подходит в категорию временных дорог, так как по физико-механическим показателям, гарантию дать невозможно.</p>
                 <p>Может подойти как удовлетворительное решение поставленных задач на ближайшее время.</p>
                 </div>
               </div>
-              <div class="calculator__structure">
-                <div class="calculator__structure-top"></div>
-                <div class="calculator__structure-singl">
-                  <div class="calculator__structure-descr">
-                    <span class="point">Асфальтирование</span>
-                    <span class="value">5 см</span>
+              <div class="calculator__slide-structure structure">
+                <div class="structure--top"></div>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Асфальтирование</span>
+                    <span class="structure__value">5 см</span>
                   </div>
                 </div>
-                <div class="calculator__structure-double">
-                  <div class="calculator__structure-descr">
-                    <span class="point">Щебеночная подушка</span>
-                    <span class="value">10 см</span>
+                <div class="structure--double">
+                  <div class="structure__descr">
+                    <span class="structure__point">Щебеночная подушка</span>
+                    <span class="structure__value">10 см</span>
                   </div>
                 </div>
-                <div class="calculator__structure-bottom"></div>
+                <div class="structure--bottom"></div>
               </div>
             </div>
-            <div class="calculator__item slide slide--buget">
-              <div class="calculator__description">
-                <h3 class="slide__header">Бюджетный</h3>
-                <div class="slide__description">
+      
+            <div class="calculator__slide-item calculator__slide-item--budget">
+              <div class="calculator__slide-description">
+                <h3 class="calculator__slide-header">Бюджетный</h3>
+                <div class="calculator__slide-text">
                 <p>Этот вариант с устройством подстилающего слоя, но при кардинальной экономии на материалах.</p>
                 <p>Песчаная подушка составляет не более 15 см., щебеночная не более 10 см., и асфальтирование 5 см.</p>
                 <p>Эта конструкция долговечнее предшествующего варианта, наша организация дает гарантию на такую работу 1 год.</p>
                 </div>
               </div>
-              <div class="calculator__structure">
-                <div class="calculator__structure">
-                <div class="calculator__structure-top"></div>
-                <div class="calculator__structure-singl">
-                  <div class="calculator__structure-descr">
-                    <span class="point">Асфальтирование</span>
-                    <span class="value">5 см</span>
+              <div class="calculator__slide-structure structure">
+                <div class="structure--top"></div>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Асфальтирование</span>
+                    <span class="structure__value">5 см</span>
                   </div>
                 </div>
-                <div class="calculator__structure-double">
-                  <div class="calculator__structure-descr">
-                    <span class="point">Щебеночная подушка</span>
-                    <span class="value">10 см</span>
+                <div class="structure--double">
+                  <div class="structure__descr">
+                    <span class="structure__point">Щебеночная подушка</span>
+                    <span class="structure__value">10 см</span>
                   </div>
                 </div>
-                <div class="calculator__structure-bottom">
-                  <span class="point">Пещаная подушка</span>
-                    <span class="value">15 см</span>
+                <div class="structure--bottom">
+                  <div class="structure__descr">
+                    <span class="structure__point">Пещаная подушка</span>
+                    <span class="structure__value">15 см</span>
+                  </div>
                 </div>
+                <div class="structure--layer"></div>
               </div>
-              <div class="calculator__structure-layer"></div>
-              </div>
-            </div>
-            <div class="calculator__item slide slide--standart">
-              <div class="calculator__description">
-                <h3 class="slide__header">Стандартный пирог</h3>
-                <div class="slide__description">
+            </div> 
+      
+            <div class="calculator__slide-item calculator__slide-item--standart">
+              <div class="calculator__slide-description">
+                <h3 class="calculator__slide-header">Стандартный пирог</h3>
+                <div class="calculator__slide-text">
                   <p>Это общепринятый российский стандарт, с устройством пирога. Подстилающий слой из песка составляет 50 см. Затем слой основания из щебня расклинцованный 25 см., укладка нижнего слоя дорожного полотна из крупнозернистого асфальтобетона 6 см., и верхнего слоя из мелкозернистой асфальтобетонной смеси 5 см.</p>
                   <p>Это долговечный вариант, допускается движение грузового автотранспорта, но рекомендуется при постоянном движении последних «Грузовой стандарт». Гарантия по стандарту – 2 года.</p>
                 </div>
               </div>
-              <div class="calculator__structure">
-                <div class="calculator__structure-top"></div>
-                <div class="calculator__structure-singl">
-                  <span class="point">Асфальтирование</span>
-                  <span class="value">5 см</span>
+              <div class="calculator__slide-structure structure">
+                <div class="structure--top"></div>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Асфальтирование</span>
+                    <span class="structure__value">5 см</span>
+                  </div>
                 </div>
-                <div class="calculator__structure-singl">
-                  <span class="point">Крупнозернистый асфальтобетон</span>
-                  <span class="value">6 см</span>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Крупнозернистый<br> асфальтобетон</span>
+                    <span class="structure__value">6 см</span>
+                  </div> 
                 </div>
-                <div class="calculator__structure-double">
-                  <span class="point">Щебеночная подушка</span>
-                  <span class="value">25 см</span>
+                <div class="structure--double">
+                  <div class="structure__descr">
+                    <span class="structure__point">Щебеночная подушка</span>
+                    <span class="structure__value">25 см</span>
+                  </div>
                 </div>
-                <div class="calculator__structure-bottom">
-                  <span class="point">Песчаная подушка</span>
-                  <span class="value">50 см</span>
+                <div class="structure--bottom">
+                  <div class="structure__descr">
+                    <span class="structure__point">Песчаная подушка</span>
+                    <span class="structure__value">50 см</span>
+                  </div>
                 </div>                
               </div>
             </div>
-            <div class="calculator__item slide slide--cargo">
-              <div class="calculator__description">
-                <h3 class="slide__header">Грузовой стандарт</h3>
-                <div class="slide__description">
+      
+            <div class="calculator__slide-item calculator__slide-item--cargo">
+              <div class="calculator__slide-description">
+                <h3 class="calculator__slide-header">Грузовой стандарт</h3>
+                <div class="calculator__slide-text">
                   <p>Данный вариант часто встречается у крупных предприятий, где движение тяжелых машин на территории достаточно интенсивно (погрузочно-разгрузочные склады, производственные базы).</p>
                   <p>Важным отличием от предыдущего конструктива, помимо небольшого увеличения подстилающего слоя основания 10 см., и щебеночного основания на 5-10 см., является устройства бетонной подушки 10-13 см.</p>
                   <p>Это фундаментально укрепляет конструкцию дорожного пирога и наша компания готова предложить гарантию на такие работы 4 года.</p>
                 </div>
               </div>
-              <div class="calculator__structure">
-                <div class="calculator__structure-top"></div>
-                <div class="calculator__structure-singl">
-                  <span class="point">Асфальтирование</span>
-                  <span class="value">5 см</span>
+              <div class="calculator__slide-structure structure">
+                <div class="structure--top"></div>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Асфальтирование</span>
+                    <span class="structure__value">5 см</span>
+                  </div>
                 </div>
-                <div class="calculator__structure-singl">
-                  <span class="point">Крупнозернистый асфальтобетон</span>
-                  <span class="value">6 см</span>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Крупнозернистый<br> асфальтобетон</span>
+                    <span class="structure__value">6 см</span>
+                  </div> 
                 </div>
-                <div class="calculator__structure-singl">
-                  <span class="point">Бетонная подушка</span>
-                  <span class="value">10-13 см</span>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Бетонная подушка</span>
+                    <span class="structure__value">10-13 см</span>
+                  </div> 
                 </div>
-                <div class="calculator__structure-double">
-                  <span class="point">Щебеночная подушка</span>
-                  <span class="value">40 см</span>
+                <div class="structure--double">
+                  <div class="structure__descr">
+                    <span class="structure__point">Щебеночная подушка</span>
+                    <span class="structure__value">40 см</span>
+                  </div>
                 </div>
-                <div class="calculator__structure-bottom">
-                  <span class="point">Песчаная подушка</span>
-                  <span class="value">60 см</span>
+                <div class="structure--bottom">
+                  <div class="structure__descr">
+                    <span class="structure__point">Песчаная подушка</span>
+                    <span class="structure__value">60 см</span>
+                  </div> 
                 </div>                
               </div>
             </div>
-            <div class="calculator__item slide slide--germany">
-              <div class="calculator__description">
-                <h3 class="slide__header">Немецкий стандарт</h3>
-                <div class="slide__description">
+      
+            <div class="calculator__slide-item calculator__slide-item--germany">
+              <div class="calculator__slide-description">
+                <h3 class="calculator__slide-header">Немецкий стандарт</h3>
+                <div class="calculator__slide-text">
                   <p>Немецкий стандарт редко встречается в нашей стране. Например, в г.Сочи на трассах работы производились максимально близкими к данному варианту, курировал этот объект профессор из Германии.</p>
                   <p>Однако за рубежом конструктив достаточно широко применяется. Существенное изменение здесь, только в толщине дорожного покрытия, асфальтируемая толщина нижнего слоя покрытия -30 см, верхнего слоя покрытия 10 см.</p>
                   <p>Гарантию на такие работы мы готовы дать 8 лет.</p>
                 </div>
               </div>
-              <div class="calculator__structure">
-                <div class="calculator__structure-top"></div>
-                <div class="calculator__structure-singl">
-                  <span class="point">Асфальтирование</span>
-                  <span class="value">10 см</span>
+              <div class="calculator__slide-structure structure">
+                <div class="structure--top"></div>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Асфальтирование</span>
+                    <span class="structure__value">10 см</span>
+                  </div>
                 </div>
-                <div class="calculator__structure-singl">
-                  <span class="point">Крупнозернистый асфальтобетон</span>
-                  <span class="value">30 см</span>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Крупнозернистый<br> асфальтобетон</span>
+                    <span class="structure__value">30 см</span>
+                  </div>
                 </div>
-                <div class="calculator__structure-singl">
-                  <span class="point">Бетонная подушка</span>
-                  <span class="value">10-13 см</span>
+                <div class="structure--singl">
+                  <div class="structure__descr">
+                    <span class="structure__point">Бетонная подушка</span>
+                    <span class="structure__value">10-13 см</span>
+                  </div> 
                 </div>
-                <div class="calculator__structure-double">
-                  <span class="point">Щебеночная подушка</span>
-                  <span class="value">40 см</span>
+                <div class="structure--double">
+                  <div class="structure__descr">
+                    <span class="structure__point">Щебеночная подушка</span>
+                    <span class="structure__value">40 см</span>
+                  </div>
                 </div>
-                <div class="calculator__structure-bottom">
-                  <span class="point">Песчаная подушка</span>
-                  <span class="value">60 см</span>
+                <div class="structure--bottom">
+                  <div class="structure__descr">
+                    <span class="structure__point">Песчаная подушка</span>
+                    <span class="structure__value">60 см</span>
+                  </div>
                 </div>                
               </div>
             </div>
-            <div class="calculator__item slide slide--yours">
-              <div class="calculator__description">
-                <h3 class="slide__header">Свой вариант</h3>
-                <div class="slide__range">
-                  <label class="slide__label" for="frez">Фрезерование</label>
-                  <div class="range__progress">
-                    <div class="range__bar" style="width: 0%"></div>
-                  </div>
-                  <input type="text" class="slide__input" id="frez" placeholder="0">
+            
+            <div class="calculator__slide-item calculator__slide-item--yours">
+              <div class="calculator__slide-description">
+                <h3 class="calculator__slide-header">Свой вариант</h3>
+                <div class="calculator__slide-range range">
+                  <label class="range__label" for="frez">Фрезерование</label>
+                  <div class="range__wrapper">
+                    <div class="range__progress">
+                      <div class="range__bar" style="width: 0%"></div>
+                    </div>
+                    <div class="range__toggle"></div>
+                  </div>                  
+                  <input type="text" class="calculator__slide-input" id="frez" placeholder="0 см">
                 </div>
-                <div class="slide__range">
-                  <label class="slide__label" for="grunt">Снятие грунта</label>
-                  <div class="range__progress">
-                    <div class="range__bar" style="width: 0%"></div>
-                  </div>
-                  <input type="text" class="slide__input" id="grunt" placeholder="0">
+                <div class="calculator__slide-range range">
+                  <label class="range__label" for="">Снятие грунта</label>
+                  <div class="range__wrapper">
+                    <div class="range__progress">
+                      <div class="range__bar" style="width: 0%"></div>
+                    </div>
+                    <div class="range__toggle"></div>
+                  </div>                  
+                  <input type="text" class="calculator__slide-input" id="grunt" placeholder="0 см">
                 </div>
-                <div class="slide__range">
-                  <label class="slide__label" for="sead">Толщина песок</label>
-                  <div class="range__progress">
-                    <div class="range__bar" style="width: 30%"></div>
-                  </div>
-                  <input type="text" placeholder="30 см" class="slide__input" id="sead">
+                <div class="calculator__slide-range range">
+                  <label class="range__label" for="sead">Толщина песок</label>
+                  <div class="range__wrapper">
+                    <div class="range__progress">
+                      <div class="range__bar" style="width: 30%"></div>
+                    </div>
+                    <div class="range__toggle range__toggle--active"></div>
+                  </div>                  
+                  <input type="text" class="calculator__slide-input calculator__slide-input--active" id="sead" placeholder="30 см">
                 </div>
-                <div class="slide__range">
-                  <label class="slide__label" for="goal-bottom">Толщина нижнего слоя основания щебень</label>
-                  <div class="range__progress">
-                    <div class="range__bar" style="width: 30%"></div>
-                  </div>
-                  <input type="text" class="slide__input" id="goal-bottom" placeholder="30 см">
+                <div class="calculator__slide-range range">
+                  <label class="range__label" for="goal-bottom">Толщина нижнего слоя основания щебень</label>
+                  <div class="range__wrapper">
+                    <div class="range__progress">
+                      <div class="range__bar" style="width: 60%"></div>
+                    </div>
+                    <div class="range__toggle range__toggle--active"></div>
+                  </div>                  
+                  <input type="text" class="calculator__slide-input calculator__slide-input--active" id="frez" placeholder="30 см">
                 </div>
-                <div class="slide__range">
-                  <label class="slide__label" for="goal-top">Толщина верхнего слоя основания щебень</label>
-                  <div class="range__progress">
-                    <div class="range__bar" style="width: 0%"></div>
-                  </div>
-                  <input type="text" class="slide__input" id="goal-top" placeholder="0">
+                <div class="calculator__slide-range range">
+                  <label class="range__label" for="for="goal-top">Толщина верхнего слоя основания щебень</label>
+                  <div class="range__wrapper">
+                    <div class="range__progress">
+                      <div class="range__bar" style="width: 0%"></div>
+                    </div>
+                    <div class="range__toggle"></div>
+                  </div>                  
+                  <input type="text" class="calculator__slide-input" id="goal-top" placeholder="0 см">
                 </div>
-                <div class="slide__range">
-                  <label class="slide__label" for="asf-bottom">Асфальт нижний слой</label>
-                  <div class="range__progress">
-                    <div class="range__bar" style="width: 0%"></div>
-                  </div>
-                  <input type="text" class="slide__input" id="asf-bottom" placeholder="0">
+                <div class="calculator__slide-range range">
+                  <label class="range__label" for="asf-bottom">Асфальт нижний слой</label>
+                  <div class="range__wrapper">
+                    <div class="range__progress">
+                      <div class="range__bar" style="width: 0%"></div>
+                    </div>
+                    <div class="range__toggle"></div>
+                  </div>                  
+                  <input type="text" class="calculator__slide-input" id="asf-bottom" placeholder="0 см">
                 </div>
-                <div class="slide__range">
-                  <label class="slide__label" for="asf-top">Асфальт верхний слой</label>
-                  <div class="range__progress">
-                    <div class="range__bar" style="width: 70%"></div>
-                  </div>
-                  <input type="text" class="slide__input" id="asf-top" placeholder="15 см">
+                <div class="calculator__slide-range range">
+                  <label class="range__label" for="asf-top">Асфальт верхний слой</label>
+                  <div class="range__wrapper">
+                    <div class="range__progress">
+                      <div class="range__bar" style="width: 70%"></div>
+                    </div>
+                    <div class="range__toggle range__toggle--active"></div>
+                  </div>                  
+                  <input type="text" class="calculator__slide-input calculator__slide-input--active" id="asf-top" placeholder="15 см">
                 </div>
-                <div class="slide__range">
-                  <label class="slide__label" for="beton">Бетонирование</label>
-                  <div class="range__progress">
-                    <div class="range__bar" style="width: 0%"></div>
-                  </div>
-                  <input type="text" class="slide__input" id="beton" placeholder="0">
+                <div class="calculator__slide-range range">
+                  <label class="range__label" for="beton">Бетонирование</label>
+                  <div class="range__wrapper">
+                    <div class="range__progress">
+                      <div class="range__bar" style="width: 0%"></div>
+                    </div>
+                    <div class="range__toggle"></div>
+                  </div>                  
+                  <input type="text" class="calculator__slide-input" id="beton" placeholder="0 см">
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="specify">
-            <div class="form__row">
-              <fieldset class="form__col">
-                <legend class="calculator__form-title">Пожалуйста, уточните</legend>
-                <input type="radio" name="cover" id="remuve-cover" disabled>
-                <label for="remuve-cover">Со снятием старого покрытия </label>
-                <input type="radio" name="cover" id="reset-cover" checked>
-                <label for="reset-cover">Без снятия старого покрытия</label>
+          <div class="calculator__specify">
+            <div class="calculator__row">
+              <fieldset class="calculator__col">
+                <legend class="calculator__col-title">Пожалуйста, уточните:</legend>
+                <input type="radio" name="cover" id="remuve-cover" class="calculator__input-hide" disabled>
+                <label for="remuve-cover" class="calculator__form-label">Со снятием старого покрытия </label>
+                <input type="radio" name="cover" id="reset-cover" class="calculator__input-hide" checked>
+                <label for="reset-cover" class="calculator__form-label">Без снятия старого покрытия</label>
               </fieldset>
-              <fieldset class="form__col">
-                <legend class="calculator__form-title">Выберите тип</legend>
+              <fieldset class="calculator__col calculator__col--wide">
+                <legend class="calculator__col-title">Выберите тип:</legend>
                 <div class="form__col-group">
-                  <input type="radio" name="roud-type" id="federal">
-                  <label for="federal">Федеральное значение</label>
-                  <input type="radio" name="roud-type" id="sity">
-                  <label for="sity">Городские или муниципальные объекты</label>
+                  <input type="radio" name="roud-type" id="federal" class="calculator__input-hide">
+                  <label for="federal" class="calculator__form-label">Федеральное значение</label>
+                  <input type="radio" name="roud-type" id="sity" class="calculator__input-hide">
+                  <label for="sity" class="calculator__form-label">Городские или муниципальные объекты</label>
                 </div>
                 <div class="form__col-group">
-                  <input type="radio" name="roud-type" id="depot">
-                  <label for="depot">Складские/производственные территории</label>
-                  <input type="radio" name="roud-type" id="privat">
-                  <label for="privat">Придомовые и другие частные</label>
+                  <input type="radio" name="roud-type" id="depot" class="calculator__input-hide">
+                  <label for="depot" class="calculator__form-label">Складские/производственные территории</label>
+                  <input type="radio" name="roud-type" id="privat" class="calculator__input-hide">
+                  <label for="privat" class="calculator__form-label">Придомовые и другие частные</label>
                 </div>                
               </fieldset>
             </div>
-            <div class="form__row">
-              <fieldset class="form__col">
-                <legend class="calculator__form-title">Последующее обслуживание</legend>
-                <input type="radio" name="servises" id="clean">
-                <label for="clean">С уборкой снега</label>
-                <input type="radio" name="servises" id="unclean">
-                <label for="unclean">Без уборки</label>
+            <div class="calculator__row">
+              <fieldset class="calculator__col">
+                <legend class="calculator__col-title">Последующее обслуживание:</legend>
+                <input type="radio" name="servises" id="clean" class="calculator__input-hide">
+                <label for="clean" class="calculator__form-label">С уборкой снега</label>
+                <input type="radio" name="servises" id="unclean" class="calculator__input-hide">
+                <label for="unclean" class="calculator__form-label">Без уборки</label>
               </fieldset>
-              <div class="form__col">
-                <label for="space">Укажите площадь всей асфальтируемой поверхности</label>
-                <input type="text" id="space" placeholder="450 м">
-                <span class="point">45</span>
-                  <span class="value">м <sup>2</sup></span>
+              <div class="calculator__col">
+                <label for="space" class="calculator__col-title calculator__col-title--small">Укажите площадь всей асфальтируемой поверхности:</label>
+                <input type="text" id="space" placeholder="450 м кв" class="calculator__input-text">
               </div>
               <button type="submit" class="btn btn--green">Получить смету</button>
             </div>
           </div>
-
-          <div class="pop-up">
-          </div>
         </div>
       </form>
-
-    </div>     
+      <div class="pop-up pop-up--order">
+        <form action="POST" name="form-order" id="form-order" class="form--order">
+          <div class="form__header">
+            <p>Вы сразу получите предварительное коммерческое предложение на указанную ниже почту, в автоматическом режиме</p>
+          </div>
+          <div class="form__container">
+            <p>А на указанный телефон в ближайшее время раздастся звонок для уточнения многих факторов, влияющих на окончательную стоимость</p>
+            <input type="email" data-input-mask="email-order" id="email-order" name="email-order" class="form__input-order" placeholder="Ваш E-mail">
+            <input type="tel" data-input-mask="phone-order" id="tel-order" name="phon-order" class="form__input-order" placeholder="+7 (...) - ... - .. - ..">
+            <button type="submit" class="btn btn--green">Получить смету</button>
+          </div>
+          <button type="button" class="btn btn--green btn--mini"></button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <section class="object container">
@@ -493,50 +560,48 @@ http://browsehappy.com/">обновите</a>
     </div>
   </section>
     
-  <section class="news">
-    <div class="container">
-      <h2 class="section__title">Новости компании</h2>
-      <a href="#" class="section__link">Читать все новости</a>
-      <div class="news__list news__list--lead">
-        <div class="news__item news__item--lead">
-          <div class="news__item-img">
-            <img src="img/content/object1.jpg" height="325" alt="">
-          </div>
-          <header class="news__head">
-            <time datetime="2012-12-23" class="news__date">20.10.<br>2016</time>
-            <a href="#" class="news__title">Новый законченный объект, готовый к использованию</a>
-          </header>
-        </div>  
-      </div>
+    <section class="news">
+      <div class="container">
+        <h2 class="section__title">Новости компании</h2>
+        <a href="#" class="section__link">Читать все новости</a>
+        <div class="news__list">
+          <article class="news__item news__item--lead">
+            <figure class="news__item-img">
+              <img src="img/content/object1.jpg" width="530" height="325" alt="">
+            </figure>
+            <header class="news__head">
+              <time datetime="2012-12-23" class="news__date">20.10.<br>2016</time>
+              <a href="#" class="news__title">Новый законченный объект, готовый к использованию</a>
+            </header>
+          </article>  
 
-      <div class="news__list news__list--flow">
-        <div class="news__item news__item--flow">
-          <header class="news__head">
-            <div class="news__item-img">
-              <img src="img/content/object3.jpg" width="106" height="80" alt="">
-            </div>
-            <div class="news__description">
-              <time datetime="2012-12-23" class="news__date">20.10.2016</time>
-              <a href="#" class="news__title">Новый законченный объект, готовый к использованию</a>
-            </div>
-          </header>  
-          <p class="news__text">Я рад, что у меня есть родители, и сейчас такая пора, что многие друзья отправляют родителей на море. Я своих родителей тоже</p>
-        </div>
-        <div class="news__item news__item--flow">
-          <header class="news__head">
-            <div class="news__item-img">
-              <img src="img/content/object3.jpg" width="106" height="80" alt="">
-            </div>
-            <div class="news__description">
-              <time datetime="2012-12-23" class="news__date">20.10.2016</time>
-              <a href="#" class="news__title">Новый законченный объект, готовый к использованию</a>
-            </div>
-          </header>  
-          <p class="news__text">Я рад, что у меня есть родители, и сейчас такая пора, что многие друзья отправляют родителей на море. Я своих родителей тоже</p>
+          <article class="news__item news__item--folow">
+            <header class="news__head">
+              <figure class="news__item-img">
+                <img src="img/content/object3.jpg" width="106" height="80" alt="">
+              </figure>
+              <div class="news__description">
+                <time datetime="2012-12-23" class="news__date">20.10.2016</time>
+                <a href="#" class="news__title">Новый законченный объект, готовый к использованию</a>
+              </div>
+            </header>  
+            <footer class="news__text">Я рад, что у меня есть родители, и сейчас такая пора, что многие друзья отправляют родителей на море. Я своих родителей тоже</footer>
+          </article>
+          <article class="news__item news__item--folow">
+            <header class="news__head">
+              <figure class="news__item-img">
+                <img src="img/content/object3.jpg" width="106" height="80" alt="">
+              </figure>
+              <div class="news__description">
+                <time datetime="2012-12-23" class="news__date">20.10.2016</time>
+                <a href="#" class="news__title">Новый законченный объект, готовый к использованию</a>
+              </div>
+            </header>  
+            <footer class="news__text">Я рад, что у меня есть родители, и сейчас такая пора, что многие друзья отправляют родителей на море. Я своих родителей тоже</footer>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <section class="faq">
     <div class="container">
@@ -576,7 +641,6 @@ http://browsehappy.com/">обновите</a>
 
   <div class="map-canvas">
     <div class="map" id="map"></div>
-  </div>
   </div>
 
   <footer class="footer">
@@ -632,7 +696,7 @@ http://browsehappy.com/">обновите</a>
 
   </footer>
 
-  <div class="pop-up">
+  <div class="pop-up pop-up--callback">
     <form action="POST" id="recall" name="form-calback" class="form form--callback">
     <p class="form__title">Заказать обратный звонок</p>
     <div class="form__row">
