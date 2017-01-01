@@ -8,8 +8,11 @@
   <title>Уборка и вывоз снега «Орион»</title>
   <link href="http://allfont.ru/allfont.css?fonts=franklin-gothic-demi-cond" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=cyrillic-ext" rel="stylesheet">  
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <body>
 
@@ -28,25 +31,25 @@ http://browsehappy.com/">обновите</a>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#link" class="nav__link">Главная</a>
+              <a href="#main" id="main" class="nav__link" data-target="anchor">Главная</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">О компании</a>
+              <a href="#about" class="nav__link" data-target="anchor">О компании</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Цены</a>
+              <a href="#price" class="nav__link" data-target="anchor">Цены</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Объекты</a>
+              <a href="#object" class="nav__link" data-target="anchor">Объекты</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Новости</a>
+              <a href="#news" class="nav__link" data-target="anchor">Новости</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Контакты</a>
+              <a href="#contacts" class="nav__link" data-target="anchor">Контакты</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Инвесторам</a>
+              <a href="#patron" class="nav__link" data-target="anchor">Инвесторам</a>
             </li>
           </ul>
         </nav>
@@ -87,7 +90,7 @@ http://browsehappy.com/">обновите</a>
       <button type="button" class="btn__down"></button>
     </section>
 
-    <section class="advantages">
+    <section id="about" class="advantages">
       <div class="container">
         <h2 class="section__title section__title--white">Наши преимущества</h2>
         <div class="advantages__list">
@@ -145,7 +148,7 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
 
-    <section class="calculator">
+    <section id="price" class="calculator">
       <div class="container">
         <h2 class="section__title">Калькулятор предварительного расчета стоимости укладки асфальта</h2>
         <form action="POST" id="calculator" class="calculator__form">
@@ -504,7 +507,7 @@ http://browsehappy.com/">обновите</a>
                   <label for="space" class="calculator__col-title calculator__col-title--small">Укажите площадь всей асфальтируемой поверхности:</label>
                   <input type="text" id="space" placeholder="450 м кв" class="calculator__input-text">
                 </div>
-                <button type="submit" class="btn btn--green">Получить смету</button>
+                <a href="#form-order" class="order-btn btn btn--green">Получить смету</a>
               </div>
             </div>
           </div>
@@ -517,16 +520,16 @@ http://browsehappy.com/">обновите</a>
             <div class="form__container">
               <p>А на указанный телефон в ближайшее время раздастся звонок для уточнения многих факторов, влияющих на окончательную стоимость</p>
               <input type="email" data-input-mask="email-order" id="email-order" name="email-order" class="form__input-order" placeholder="Ваш E-mail">
-              <input type="tel" data-input-mask="phone-order" id="tel-order" name="phon-order" class="form__input-order" placeholder="+7 (...) - ... - .. - ..">
+              <input type="tel" data-input-mask="phone" id="tel-order" name="phon-order" class="form__input-order" placeholder="+7 -... - ... - .. - ..">
               <button type="submit" class="btn btn--green">Получить смету</button>
             </div>
-            <button type="button" class="btn btn--green btn--mini"></button>
+            <button type="button" class="mfp-close"></button>
           </form>
         </div>
 
     </section>
 
-    <section class="object container">
+    <section id="object" class="object container">
       <div class="container">
         <h2 class="section__title">Объекты</h2>
         <a href="#" class="section__link">Смотреть все</a>
@@ -559,7 +562,7 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
       
-      <section class="news">
+      <section id="news" class="news">
         <div class="container">
           <h2 class="section__title">Новости компании</h2>
           <a href="#" class="section__link">Читать все новости</a>
@@ -620,9 +623,9 @@ http://browsehappy.com/">обновите</a>
             <div class="faq__header">Ни одной капли не пропадало бесследно в этом титаническом движении водной массы?</div>
             <div class="faq__text">Море жило своей широкой жизнью, полной мощного движения. Стаи волн с шумом катились на берег и разбивались о песок, он слабо шипел, впитывая воду. Взмахивая белыми гривами, передовые волны с шумом ударялись грудью о берег и отступали, отражённые им, а их уже встречали другие, шедшие поддержать их. Обнявшись крепко, в пене и брызгах, они снова катились на берег и били его в стремлении расширить пределы своей жизни. От горизонта до берега, на всём протяжении моря, рождались эти гибкие и сильные волны и всё шли, шли плотной массой, тесно связанные друг с другом единством цели… Солнце всё ярче освещало их хребты, у далёких волн, на горизонте, они казались кроваво-красными. Ни одной капли не пропадало бесследно в этом титаническом движении водной массы, которая, казалось, воодушевлена какой-то сознательной целью и вот – достигает её этими широкими, ритмичными ударами</div>
           </li>
-          <li class="faq__item faq__item--activ">
-            <div class="faq__header">У моряка нет трудного или легкого пути, есть только один путь — славный?</div>
-            <div class="faq__text">Море жило своей широкой жизнью, полной мощного движения. Стаи волн с шумом катились на берег и разбивались о песок, он слабо шипел, впитывая воду. Взмахивая белыми гривами, передовые волны с шумом ударялись грудью о берег и отступали, отражённые им, а их уже встречали другие, шедшие поддержать их. Обнявшись крепко, в пене и брызгах, они снова катились на берег и били его в стремлении расширить пределы своей жизни. От горизонта до берега, на всём протяжении моря, рождались эти гибкие и сильные волны и всё шли, шли плотной массой, тесно связанные друг с другом единством цели… Солнце всё ярче освещало их хребты, у далёких волн, на горизонте, они казались кроваво-красными. Ни одной капли не пропадало бесследно в этом титаническом движении водной массы, которая, казалось, воодушевлена какой-то сознательной целью и вот – достигает её этими широкими, ритмичными ударами</div>
+          <li class="faq__item">
+            <div class="faq__header faq__header--active">У моряка нет трудного или легкого пути, есть только один путь — славный?</div>
+            <div class="faq__text faq__text--active">Море жило своей широкой жизнью, полной мощного движения. Стаи волн с шумом катились на берег и разбивались о песок, он слабо шипел, впитывая воду. Взмахивая белыми гривами, передовые волны с шумом ударялись грудью о берег и отступали, отражённые им, а их уже встречали другие, шедшие поддержать их. Обнявшись крепко, в пене и брызгах, они снова катились на берег и били его в стремлении расширить пределы своей жизни. От горизонта до берега, на всём протяжении моря, рождались эти гибкие и сильные волны и всё шли, шли плотной массой, тесно связанные друг с другом единством цели… Солнце всё ярче освещало их хребты, у далёких волн, на горизонте, они казались кроваво-красными. Ни одной капли не пропадало бесследно в этом титаническом движении водной массы, которая, казалось, воодушевлена какой-то сознательной целью и вот – достигает её этими широкими, ритмичными ударами</div>
           </li>
           <li class="faq__item">
             <div class="faq__header">Если ты затерялся в открытом море с тысячей других людей, можно ли считать, что ты заблудился?</div>
@@ -640,7 +643,7 @@ http://browsehappy.com/">обновите</a>
       </div>
     </section>
 
-    <div class="map-canvas">
+    <div id="contacts" class="map-canvas">
       <div class="map" id="map"></div>
     </div>
 
@@ -654,25 +657,25 @@ http://browsehappy.com/">обновите</a>
         <nav class="nav nav--footer">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#link" class="nav__link">Главная</a>
+              <a href="#main" id="main" class="nav__link" data-target="anchor">Главная</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">О компании</a>
+              <a href="#about" class="nav__link" data-target="anchor">О компании</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Цены</a>
+              <a href="#price" class="nav__link" data-target="anchor">Цены</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Объекты</a>
+              <a href="#object" class="nav__link" data-target="anchor">Объекты</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Новости</a>
+              <a href="#news" class="nav__link" data-target="anchor">Новости</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Контакты</a>
+              <a href="#contacts" class="nav__link" data-target="anchor">Контакты</a>
             </li>
             <li class="nav__item">
-              <a href="#link" class="nav__link">Инвесторам</a>
+              <a href="#patron" class="nav__link" data-target="anchor">Инвесторам</a>
             </li>
           </ul>
         </nav>
@@ -694,7 +697,7 @@ http://browsehappy.com/">обновите</a>
           </div>
         </div>
       </div>
-
+    <a href="#main" data-target="anchor" class="btn__down btn__down--footer"></a>  
   </footer>
 
   <div class="pop-up pop-up--callback">
@@ -717,9 +720,11 @@ http://browsehappy.com/">обновите</a>
   </div>
   
 
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+  <script src="js/animate-css.js"></script>
   <script src="js/masckinput-min.js"></script>
+  <script src="js/magnific-popup.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

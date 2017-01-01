@@ -37,7 +37,7 @@
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   display: inline-block;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
   font-size: 30px;
   text-transform: uppercase;
   color: #436276;
@@ -128,6 +128,10 @@ body {
   padding-top: 9px;
 }
 
+.logo {
+  margin-right: 9%;
+}
+
 .nav__list {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -172,7 +176,7 @@ body {
 
 .advantages {
   position: relative;
-  padding: 56px 0 85px 0;
+  padding: 76px 0 85px 0;
   background: url(../img/bg-white.png) 0 0 #2C6278;
 }
 
@@ -227,18 +231,18 @@ body {
 }
 
 .advantages__img {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   text-align: center;
 }
 
 .calculator {
   font-size: 0;
   position: relative;
-  padding: 53px 0 45px 0;
+  padding: 45px 0 24px 0;
 }
 
 .calculator .section__title {
-  margin-bottom: 23px;
+  margin-bottom: 16px;
 }
 
 .calculator__control-list {
@@ -264,11 +268,11 @@ body {
 }
 
 .object {
-  margin-bottom: 77px;
+  margin-bottom: 60px;
 }
 
 .object .section__title {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .object__list {
@@ -315,7 +319,7 @@ body {
   width: 330px;
   overflow: hidden;
   border-radius: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .object__img img {
@@ -337,7 +341,7 @@ body {
 
 .section__link {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   text-align: center;
 }
 
@@ -472,7 +476,7 @@ body {
 }
 
 .news__item--folow .news__head .news__item-img {
-  width: 106px;
+  width: 120px;
   margin-right: 20px;
   border-radius: 3px;
   overflow: hidden;
@@ -509,7 +513,7 @@ body {
 
 .faq {
   position: relative;
-  padding: 45px 0;
+  padding: 36px 0;
   color: #fff;
   background: url(../img/bg-white.png) 0 0 #2C6278;
 }
@@ -526,7 +530,7 @@ body {
 }
 
 .faq .section__title {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .faq__list {
@@ -534,7 +538,8 @@ body {
 }
 
 .faq__item {
-  margin-bottom: 14px;
+  margin-bottom: 11px;
+  cursor: pointer;
 }
 
 .faq__header {
@@ -571,10 +576,20 @@ body {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+.faq__header:hover:after {
+  top: 9px;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 .faq__text {
-  margin: 22px 0;
+  margin: 16px 0;
   padding: 16px 20px 20px 30px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
@@ -606,7 +621,7 @@ body {
 }
 
 .footer .copy {
-  padding: 13px 0 15px 0;
+  padding: 18px 0 15px 0;
   background: #213746;
   font: 300 14px/1 Roboto, sans-serif;
   color: #fff;
@@ -618,7 +633,11 @@ body {
 }
 
 .header--footer {
-  padding: 30px 0;
+  padding: 25px 0;
+}
+
+.header--footer .logo {
+  margin-right: 0;
 }
 
 .nav--footer .nav__link {
@@ -647,7 +666,7 @@ body {
 }
 
 .form__title {
-  margin-bottom: 45px;
+  margin-bottom: 34px;
 }
 
 .form__row {
@@ -713,6 +732,7 @@ body {
   padding: 20px 30px;
   margin: 0 auto;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.1), -10px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .form--callback .form__title {
@@ -733,23 +753,21 @@ body {
   box-shadow: 10px 10px rgba(0, 0, 0, 0.1), -10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form--order .btn--green {
-  display: block;
-  margin: 20px auto 0 auto;
-}
-
-.form--order .btn--mini {
+.form--order .mfp-close {
+  line-height: 0;
   position: absolute;
   top: 12px;
   right: -12px;
   width: 24px;
   height: 24px;
-  padding: 0;
+  opacity: 1;
+  background: #7cc15e;
 }
 
-.form--order .btn--mini:before {
+.form--order .mfp-close:before {
   content: 'X';
   display: inline-block;
+  font-size: 18px;
 }
 
 .form--order .form__header {
@@ -835,8 +853,8 @@ body {
 
 .btn__down {
   position: absolute;
-  bottom: 42px;
-  left: 50%;
+  bottom: 24px;
+  left: 49%;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -862,12 +880,26 @@ body {
           transform: rotate(-45deg);
 }
 
+.btn__down--footer {
+  position: fixed;
+  bottom: 100px;
+  left: 95%;
+  background: #436276;
+}
+
+.btn__down--footer:before {
+  top: 15px;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
 .object .btn--green {
   max-width: 170px;
 }
 
 .object .btn--green:hover,
-.object .btn--green:active {
+.object .btn--green:active, .object .mfp-close {
   background: #436276;
 }
 
@@ -1278,7 +1310,7 @@ body {
   display: block;
   font: 300 16px/1 Roboto, sans-serif;
   color: #000;
-  padding: 0 0 15px 30px;
+  padding: 0 0 15px 45px;
   cursor: pointer;
 }
 
